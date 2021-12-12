@@ -28,9 +28,11 @@ export const BlogRow = styled.div`
   grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
   @media screen and (max-width: 768px) {
+      height: 0px;
     grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-  
   }
+  
+  
 `;
 
 export const Column1 = styled.div`
@@ -57,7 +59,12 @@ export const TopLine = styled.p`
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
-  margin-top: 20px
+  margin-top: 20px;
+
+  @media screen and (max-width: 720px) {
+    margin-bottom: 0px;
+  margin-top: 20px;
+  }
   
   
 `;
@@ -71,6 +78,9 @@ export const Heading = styled.h1`
 
   @media screen and(max-width: 480px) {
     font-size: 12px;
+  }
+  @media screen and(max-width: 720px) {
+    margin-top: 24px;
   }
 `;
 export const Subtitle = styled.p`
@@ -92,6 +102,5 @@ export const ImageWrap = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  margin: 0 0 10px 0;
   padding-right: 0;
 `;
