@@ -19,6 +19,9 @@ export const BlogWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+  @media screen and (max-width: 360px) {
+      height: 964px;
+  }
 `;
 
 export const BlogRow = styled.div`
